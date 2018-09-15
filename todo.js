@@ -14,7 +14,6 @@ const methods = {
   add(state) {
     toDoList.todo.push({toDoIndex, state});
     console.log(`id: ${toDoIndex++}, ${state} 항목이 새로 추가되었습니다.`);
-    return 'add'
   },
   /**
    * 
@@ -23,7 +22,6 @@ const methods = {
   show(state) {
     toDoList[state].forEach((value) => {
       console.log(`${state}: ${value.toDoIndex}. ${value.state}`)
-      return 'show'
     })
   },
   /**
@@ -48,7 +46,6 @@ const methods = {
     toDoList[state].push(job);
   
     console.log(`현재상태 : todo:${toDoList['todo'].length}개, doing:${toDoList['doing'].length}개, done:${toDoList['done'].length}개`);
-    return 'update';
   }
 };
 
